@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff758f;
+}
+
+#message {
+  position: absolute;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3%;
+  color: rgb(41, 41, 41);
+  left: 26%;
+  top: 20%;
+  font-family: "Coming Soon", cursive;
+  font-size: 250%;
+  
+}
+
+#message h1 {
+    text-shadow: 2px 2px #ff0000;
+}
+
+#message p {
+    position: absolute;
+    right: 15%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 150%;
+}
+
+.heart-1 {
+  left: 5%;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.heart-2 {
+  left: 15%;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+.heart-3 {
+  left: 25%;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+}
+
+.heart-4 {
+  left: 35%;
+  animation-duration: 2.9s;
+  animation-iteration-count: infinite;
+}
+
+.heart-5 {
+  left: 45%;
+  animation-duration: 2.6s;
+  animation-iteration-count: infinite;
+}
+
+.heart-6 {
+  left: 55%;
+  animation-duration: 2.4s;
+  animation-iteration-count: infinite;
+}
+
+.heart-7 {
+  left: 65%;
+  animation-duration: 2.7s;
+  animation-iteration-count: infinite;
+}
+
+.heart {
+  position: relative;
+  display: inline-block;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  animation-name: drop;
+  animation-timing-function: ease-in;
+}
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart::before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+
+@keyframes drop {
+  0% {
+    top: -55px;
+  }
+  100% {
+    top: 900px;
+    opacity: 0.2;
+  }
+}
+
+
+.valentines-day-card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background-color: #8e21e2;
+  overflow: hidden;
+  border:10px solid white;
+  border-radius:10px;
+  box-shadow: 0 0 100px rgba(0,0,0,.4);
+}
+
+.valentines-day-card:before {
+  content:"";
+  position: absolute;
+  background-color: #ffb3c1;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  top:140px;
+  left:-25px;
+  box-shadow:60px 20px #ffb3c1,130px 10px #ffb3c1, 190px 20px #ffb3c1,260px -5px #ffb3c1, 340px 20px #ffb3c1;
+}
+
+.valentines-day-card:after {
+  content:"";
+  position: absolute;
+  background-color: #ffccd5;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  top:160px;
+  left:-40px;
+  box-shadow: 50px 20px #ffccd5,120px 40px #ffccd5, 200px 15px #ffccd5,260px 30px #ffccd5, 330px 30px #ffccd5,380px 10px #ffccd5;
+}
+
+.clouds {
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color: #fff0f3;
+  z-index:5;
+  top:210px;
+  left:-20px;
+  box-shadow: 55px 30px #fff0f3, 125px 10px #fff0f3,175px 20px #fff0f3, 250px 10px #fff0f3, 320px 5px #fff0f3, 380px 10px #fff0f3;
+}
+
+.hearts {
+  position: absolute;
+  z-index:2;
+}
+
+.heartOne {
+  position: absolute;
+  left:100px;
+  top:250px;
+  animation: up 4s linear forwards 1s;
+}
+
+.heartTwo {
+  position: absolute;
+  left:270px;
+  top:230px;
+  animation: up 5s linear forwards 1.8s;
+}
+
+.heartThree {
+  position: absolute;
+  left:85px;
+  top:415px;
+  animation: up 5s linear forwards 3s;
+}
+
+.heartFour {
+  position: absolute;
+  left:320px;
+  top:380px;
+  animation: upTwo 9s linear infinite 3.5s;
+}
+
+.heartFive {
+  position: absolute;
+  left:150px;
+  top:400px;
+  animation: upTwo 13s linear infinite 4.5s;
+}
+
+.right-side:before, .right-side:after {
+  position: absolute;
+  content:"";
+  transform-origin: left;
+  animation: move 1s ease infinite;
+}
+
+.right-side:before {
+  border-radius:50% 50% 50% 0;
+  width:21px;
+  height:20px;
+  background-color: #c9184a;
+  left:-0.26px;
+}
+
+.right-side:after {
+  height:0;
+  width:0;
+  border-bottom:10px solid transparent;
+  border-left: 15px solid #c9184a;
+  top:19px;
+  left:-0.26px;
+}
+
+@keyframes move {
+  0%, 100% {transform: rotateY(0);}
+  50% {transform: rotateY(-45deg);}
+}
+
+.left-side:before, .left-side:after {
+  position: absolute;
+  content:"";
+  transform-origin: right;
+  animation: move 1s ease infinite;
+}
+
+.left-side:before {
+  border-radius:50% 50% 0 50%;
+  width:20px;
+  height:20px;
+  left:-20.7px;
+  background-color: #ff4d6d;
+}
+
+.left-side:after {
+  height:0;
+  width:0;
+  left:-15px;
+  border-bottom:10px solid transparent;
+  border-right: 15px solid #ff4d6d;
+  top:19px;
+}
+
+@keyframes up {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-200px);}
+}
+
+@keyframes upTwo {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-450px);}
+}
+
+.text {
+  position: absolute;
+  color: #ffffff;
+  font-size:30px;
+  font-family: 'Pacifico', cursive;
+  line-height:1;
+  text-align: center;
+  width:380px;
+  left:10px;
+  z-index:3;
+  top:320px;
+  animation: up 1s ease forwards;
+  transition: .2s;
+}
+
+.hover {
+  color: white;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.text:hover span {
+  display: none;
+}
+
+.text:hover:before {
+  content:"Recuerda no comer demasiados dulces: ya eres lo suficientemente dulce, eres increible";
+  font-size:25px;
+  color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  overflow: visible;
+}
+svg path#line {
+  fill: none;
+  stroke: #e00000;
+  stroke-width: 2;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+  stroke-dasharray:none;
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 4s linear infinite;
+}
+svg path#heart {
+  transform-origin: 50% 50%;
+  animation: blink 4s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.0);
+  }
+}
